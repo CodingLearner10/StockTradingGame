@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Portfolio</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ownership in stock_ownership %}
+                    <tr>
+                        <td>{{ ownership.stock.name }}</td>
+                        <td>{{ ownership.quantity }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+</html>

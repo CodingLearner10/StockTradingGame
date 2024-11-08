@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Stocks</title>
+</head>
+<body>
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="alert {{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Your existing form and trade content goes here -->
+    <form method="POST" action="{{ url_for('trade') }}">
+        <label for="stock_name">Stock Name:</label>
+        <input type="text" id="stock_name" name="stock_name" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="action">Action:</label>
+        <select name="action" id="action">
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+        </select>
+
+        <button type="submit">Execute Trade</button>
+    </form>
+</body>
+</html>

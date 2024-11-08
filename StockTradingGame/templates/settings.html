@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        
+        <h2>Change Password</h2>
+        <form method="POST" action="/settings">
+            <div class="form-group">
+                <label for="new_password">New Password</label>
+                <input type="password" class="form-control" id="new_password" name="new_password" required>
+            </div>
+            <button type="submit" name="change_password" class="btn btn-primary">Change Password</button>
+        </form>
+        
+        <h2>Delete Account</h2>
+        <form method="POST" action="/settings">
+            <button type="submit" name="delete_account" class="btn btn-danger">Delete Account</button>
+        </form>
+    </div>
+</body>
+</html>
