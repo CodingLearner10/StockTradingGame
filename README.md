@@ -77,6 +77,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - The game logic and structure were implemented with the help of various resources, including Flask documentation.
 - Special thanks to ChatGPT for contributing to the developement of this project.
+- Special thanks to bootstrap CSS for the UI in this project.
 
 ---
 
